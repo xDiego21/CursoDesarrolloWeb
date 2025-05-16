@@ -1,0 +1,53 @@
+.box-model{
+    width: 200px;
+    height: 100px;
+    background-color: aqua;
+    padding: 20px;
+    border: 10px solid blue;
+    margin: 150px;
+}
+.block-element {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+.inline-element {
+    display: inline;
+    color: red;
+    font-weight: bold;
+}
+.inline-block-element {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    background-color: lightgreen;
+    margin: 10px;
+}
+.static-box {
+    position: static;
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+.flex-container {
+    display: flex;
+}
+.item {
+    padding: 10px;
+    background-color: lightblue;
+    margin: 5px;
+}
