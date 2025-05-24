@@ -1,0 +1,81 @@
+                    /* VINCULAR ARCHIVO CSS CON HTML */
+/* <link rel="stylesheet" href="../ ruta del archivo css"> */
+/* css lee el codigo en forma de cascada, de arriba a abajo dando prioridad hacia abajo */
+/* CSS acepta paletas de colores personalizadas colorhunt.co */
+
+
+                    /* FORMAS DE DAR ESTILO A NUESTRO HTML */
+/* Selectores de Etiquetas, Clases y Especificidad */
+
+                    /* SELECTOR DE ETIQUETAS */
+
+p{ /* Etiqueta */
+    color: red; /* propiedad: valor */
+    /* propiedad para cambiar color */
+    text-align: center; /* alinea en texto dependiendo el valor seleccionado */
+    text-decoration: underline; /* añade decoracion al texto, ej subrayado */
+    font-style: bold; /* cambia el estilo de letra */
+    font-family: 'Times New Roman', Times, serif; /* cambia el tipo de letra */ /* fonts.google.com para mas tipos de letra */
+    font-size: larger; /* cambia el tamaño de letra */
+    text-shadow: red; /* agrega sombreado al texto */ /*cssgenerator.org/text-shadow-css-generator.html */
+}
+header{ /* Etiqueta */
+    background-color: red; /* propiedad para cambiar color de fondo */
+}
+li{
+    list-style: none; /* por defecto los Items de Listas vienen con una decoracion, ya sea un punto o numero. Con esta propiedad se lo quitamos o modificamos */
+}
+
+                    /* SELECTOR DE CLASES */
+
+/* Con la propiedad class="selectorClase", denntro de la apertura de una etiqueta en mi html le definimos una clase para luego llamarla en mi css */
+.selectorClase{ /* Clase */ 
+    color: blue;
+    background-color: blue;
+    /* color de texto y fondo solo a esta clase especifica */
+    /* el selector de clase tendra mayor jerarquia que la Etiqueta */ 
+}
+
+                    /* SELECTOR DE ESPECIFICIDAD */
+
+header p{ /* Especificidad */
+    color: yellow; /* el selector de Especificidad trabaja sobre la etiqueta hijo selecciona dentro del padre, en este casa todos los parrafos dentro del header tendran color amarillo */
+}
+header a{ /* a las Etiquetas de links(a) solo se les puede aplicar estilos usando Selector de especificidad o asignandole un clase */
+    color: yellow;
+    text-decoration: none;
+}
+
+                    /* HERENCIA DE ESTILOS PADRE E HIJO */
+/* Las Etiquetas hijo heredan el estilo asignado a la Etiqueta padre */
+/* Las Etiquetas de link(a) no heredan estilos, se les debe llamar por Clase o Especificidad */
+
+main{
+    color: red; /*todos los textos dentro del main seran de color rojo */
+}
+
+                    /* ALTURA, ANCHO Y UNIDADES DE MEDIDA */
+/* height(altura), width(ancho), pixel(px) unidad de medida absoluta y porcentaje(%) unidad de medida que se adapta al ancho de la etiqueta padre */
+
+header{
+    height: 100px; /* altura en pixel absoluta */
+    height: 10%; /* altura en porcentaje adaptativa */
+    width: 100px; /* ancho en pixel */
+    width: 10%; /* ancho en porcentaje */
+}
+img{
+    width: 50px; /* para las imagenes es recomendable trabajar una sola medida */
+}
+main{
+    /* developer.mozilla.org/en-US sitio web util */
+    background-image: url(./ ruta de la imagen); /* propiedad para cargar una imagen de FONDO */
+    background-position: top; /* posiciona la img en alguna parte del fondo, en este ej, en top, podemos % y px */
+    background-repeat: repeat; /* esta propiedad sirve para img pequeñas que se repiten dentro del bloque de la etiqueta */
+    background-size: cover; /* define el tamaño de la img dentro del fondo del bloque */
+}
+
+/*------------------------FIN DE LA CLASE 2--------------------------*/
+
+
+
+
