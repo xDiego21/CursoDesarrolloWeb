@@ -76,6 +76,84 @@ main{
 
 /*------------------------FIN DE LA CLASE 2--------------------------*/
 
+                    /* BOX MODEL */
+/* Modelos de caja, las Etiquetas representan cajas, cada una de estas etiquetas contenedoras pueden tener mas etiquetas contenedoras dentro */
+
+<ul> /* ul Caja contenedora */
+    <li>LINK</li> /* Dentro otras cajas contenedoras */
+    <li class="ejemploBox">LINK</li>
+    <li>LINK</li> /* la Etiqueta (li) es una de bloque que abarca todo el ancho disponible por naturaleza */
+    <li>LINK</li>
+</ul>;
+
+.ejemploBox{
+    border: solid 3px red; /* borde al contenido, se muestra entre el contenido(padding) y el margen(margin) */
+    background-image: url(./boxModel/tiposDeBorder.gif);
+    border-radius: ; /* sirve para redondear las esquinas de los elementos HTML */
+    padding: 10px; /* espacio interno entre el "border" y el contenido */ /* utilizando un solo valor nos genera un estacion en todos sus lados */
+    padding-bottom: 10px; /* genera espacio unicamente sobre el lado inferior */
+    padding: 20px 10px 20px 10px; /* de esta forma trabajamos sobre sus cuatro lados sin la necesidad de escribir la propiedad de todos sus lados, estos valores modifican los lados en sentido horario, top rigth bottom left */
+    padding: 20px 10px; /* de esta forma trabajamos los lados justos, top/bottom left/rigth */
+    margin: 10px; /* es el espacio externo entre el "border" de una caja y sus aledañas */
+    margin-bottom: 10px;
+    margin: 20px 10px 20px 10px;
+    margin: 20px 10px;
+    background-image: url(./boxModel/tiposDeMargenes.png);
+}
+/* Existe un margen blanco que genera html por defecto, debe ir al inicio del css, para quitarlo : */
+*{ /* (*) selector universal, afecta a todas las etiquetas y clases */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* respeta el ancho y el alto de la caja */
+}
+                    /* POSITION */
+/* Define como se posiciona un elemento en la pagina, top - left - rigth - bottom */ /* top/bottom/left/rigth no afectan si no el elemento no tiene position */
+
+.ejemploBox{
+    position: absolute; /* se posiciona al elemento mas cercano con "position" */ 
+    position: relative; /* se mueve relativo a su posicion normal */
+    position: fixed; /* se mantiene fijo en la pantalla cuando haces "scroll */
+    position: static; /* por defecto, no acepta top, left */
+    position: sticky; /* combina relative y fixed. Se queda pegado cuando haces scroll */
+    z-index: ; /* controla la profundidad de un elemento superpuesto, cuanto mayor sea el Valor(numero) de la propiedad mas al frente estara el elemento visualmente */
+}
+
+                    /* ETIQUETAS DE BLOQUE Y DE LINEA */
+<li>/* es una Etiqueta de Bloque, estas abarcan todo el ancho disponible por naturaleza */
+<img>;/* esta es una Etiqueta de Linea, abarca solo el espacio de su contenido, estas Etiquetas de Linea se pueden colocar una al lado de otra */
+
+                    /* FLEXBOX */
+/* La propiedad Flex Box nos permite jugar con filas o columnas, se aplica el la Etiqueta Padre y lo heredan sus Hijos, no sus nietos */
+
+.padreFlex{
+    display: flex; /* activa el modelo de caja FlexBox */
+    flex-direction: column; /* apila elementos uno arriba de otro, en columna eje vertical */
+    flex-direction: row; /* uno al lado de otro, en una fila eje horizontal */
+    /* si no declaramos una direccion toma por defecto "row" */
+    flex-direction: row-reverse; /* invierte su orden y los coloca del lado contrario de la caja, en una fila */
+    flex-direction: column-reverse; /* invierte su orden y los coloda del lado contrario de la caja, en una columna */
+    justify-content: space-between; /* posiciona a los Hijos en el espacio HORIZONTAL disponible del eje que decretemos en la propiedad "flex-direction" ya sea fila o columna */ /* se mueve en el eje HORIZONTAL ya sea de fila o columna */
+    background-image: url(./flexBox/valoresDeFlexDirection.jpg);
+    align-items: center; /* posiciona a los Hijos en el espacio VERTICAL disponible del eje que decretemos en la propiedad "flex-direction" ya sea fila o columna */ /* se mueve en el eje VERTICAL ya sea de fila o columna */
+    
+    flex-direction: row; /* determina que la direccion del contenido(hijos) es Horizontal en fila */
+    justify-content: ; /* se mueve por el eje(fila) en direccion HORIZONTAL */ /* en sintonia con flex-direccion */
+    align-items: ; /* se mueve por el eje(fila) en direccion VERTICAL */ /* en direccion secundario */
+    background-image: url(./flexBox/align-justify-content.webp);
+
+    flex-direction: column; /* determina que la direccion del contenido(hijos) es Vertical en un columna */
+    justify-content: ; /* se mueve por el eje(fila) en direccion VERTICAL */
+    align-items: ; /* se mueve por el eje(fila) en direccion HORIZONTAL */
+
+    flex-wrap: ;
+    background-image: url(./flexBox/flex-wrap.png);
+    align-content: ; /* solo funciona con "flex-warp" */
+
+    background-image: url(./flexBox/alignItems-column.png) url(./flexBox/alignItems-row.png);
+}
+
+/*------------------------FIN DE LA CLASE 3--------------------------*/
+
 
 
 
