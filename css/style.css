@@ -29,23 +29,6 @@ header li{
     background-color: rgba(255, 101, 0, 0.6);
     list-style: none;
 }
-/*.menu-izquierda{
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    font-size: 1.3em;
-    position: relative;
-    top: -55px;
-    left: -25px;
-}
-.menu-derecha{
-    display: flex;
-    flex-direction: row-reverse;
-    position: relative;
-    top: 10px;
-    margin: 0px 5px;
-    font-size: 2em;
-}*/
 .bannerHeader{
     background-image: url(../imagenes/bannerHeader.png);
     background-size: cover;
@@ -101,16 +84,13 @@ header li{
 /* mediaQuerry head */
 
 @media (min-width:480px) and (max-width:500px) {
-    /*.menu-izquierda {
-        gap: 5px;
-        font-size: smaller;
-        margin-top: 30px;        
-    }
-    .menu-derecha {
-        font-size: medium
-    }*/
     header{
         height: 70px;
+    }
+    .nav-item{
+        background-color: rgba(255, 101, 0, 0.7);
+        border-radius: 5px;
+        margin-bottom: 3px;
     }
 }
 @media (min-width:360px) and (max-width:479px) {
@@ -131,6 +111,11 @@ header li{
     }
     header li{
         padding: 1px;
+    }
+    .nav-item{
+        background-color: rgba(255, 101, 0, 0.7);
+        border-radius: 5px;
+        margin-bottom: 3px;
     }
 }
 
@@ -153,6 +138,11 @@ header li{
     header li{
         padding: 0px;
     }
+    .nav-item{
+        background-color: rgba(255, 101, 0, 0.7);
+        border-radius: 5px;
+        margin-bottom: 3px;
+    }
 }
 
 /* MAIN */
@@ -164,14 +154,6 @@ main{
     color: #ccc;
     height: 100%;
 }
-/*.logoindex{
-    width: 100%;
-    height: 400px;
-    margin: 0px;
-    padding: 0px;
-    image-rendering: optimizeQuality;
-    border-radius: 5px;
-}*/
 main h2, h3{
     text-decoration: underline;
     letter-spacing: 1px;
@@ -467,9 +449,6 @@ form{
     .videoTrailer{
         display: flex;
     }
-    /*.logoindex{
-        height: 250px;
-    }*/
     .carousel-inner img{
     height: 200px;
     }
@@ -538,9 +517,6 @@ form{
 
 @media (min-width:360px) and (max-width:479px) {
     /* INICIO */
-    /*.logoindex{
-        height: 200PX;
-    }*/
     .carousel-inner img{
     height: 200px;
     }
@@ -616,13 +592,6 @@ form{
     height: 200px;
     }
     /* NOVEDADES */
-    /*.seccion-novedades img{
-        width: 90%;
-        height: 350px;
-    }
-    .seccion-novedades p{
-        font-size: small;        
-    }*/
     .seccion-novedades{
         flex-direction: column;
         align-items: flex-start;
