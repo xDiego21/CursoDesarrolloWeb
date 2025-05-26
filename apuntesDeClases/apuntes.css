@@ -154,6 +154,80 @@ main{
 
 /*------------------------FIN DE LA CLASE 3--------------------------*/
 
+                    /* GRID */
+/* La propiedad Grid nos permite distribuir elementos tanto en filas como columnas, se aplica el la Etiqueta Padre y lo heredan sus Hijos, no sus nietos */
+/* A Grid no le interesa como esta organizado el codigo, le interesa como lo organizamos con las propiedades de Grid */
+/* No se usa Grid para diseñar el header o footer, se recomienda Flex */
 
+.padreGrid img{ /* necesario para que tamaño de las imagenes respeten las medidas que definimos mas abajo con columns y rows */
+    height: 100%;
+    width: 100%;
+}
+.padreGrid{
+    display: grid; /* activa el modelo de caja Grid */
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "img1 texto1 texto1"
+    "img1 img2 img2"
+    "texto2 img3 texto3"; /* nombra y organiza visualmente las areas de un grid, genera filas y columnas */
+    grid-template-columns: 25% 40% 25%;/* 1fr 2fr 1fr; 25px 40px 25px; /* define el tamaño(ancho) y la cantidad de columnas, no se recomienda usar de valor pixel */
+    grid-template-rows: 100px 150px repeat(2, 300px); /* define el tamaño(alto) y la cantidad de filas */
+    gap: 5px; /* espacio entre filas y columnas */
+    column-gap: 5px; /* espacio entre columnas */
+    row-gap: 5px; /* espacio entre flias */
+    justify-content: center; /* centra toda la grilla */
+    justify-items: center; /* horizontalmente centra el contenido de la grilla */
+    align-items: center; /* verticalmente centra el contenido de la grilla */
+    place-items: center; /* combina ambas */
+}
+.tituloGrid{
+    grid-area: titulo; /* sirve para declarar que area de la grilla queremos que ocupe */
+/* grid-(column/row) controlan cuantas filas o columnas ocupa un elemento */
+    grid-column: 1 / 3; /* desde la columna 1 hasta la 3(ocupa 2) */
+    grid-row: 1 / 2; /* desde la fila 1 hasta la fila 2(ocupa 1) */
+}
+.img1{
+    grid-area: img1;
+}
+.texto1{
+    grid-area: texto1;
+}
 
+                    /* MEDIA QUERIES */
+/* Transforma el contenido en Responsive, lo que lo adapta a dispositivos ya sea tablets o celulares */
+/* Requiere la siguiente Etiqueta con sos propiedades y valores dentro de nuestro "head" de HTML */
+/* <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
 
+body{
+    background-image: url(./mediaQuery/dimensionesResponsive.jpg);
+}
+/* "only screen" es para impresiones, se puede poner solo "@media" */
+    /* Celulares */
+/*Regla*/  /*Medio*/   /*Tarea*/
+@media only screen and (max-width: 480px) {
+    
+}
+    /* Tablets */
+@media only screen and (min-width: 481px) and (max-width: 978px) {
+    
+}
+    /* Escritorio */
+@media only screen and (min-width: 979px) {
+    
+}
+
+@media (max-width: 480px) {
+    .padreGrid{
+        grid-template-areas:  
+    "titulo"
+    "texto1"
+    "img1"
+    "texto2"
+    "img2"
+    "texto3"
+    "img3";
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px repeat(6, 50px) ;
+        row-gap: 5px;
+    }
+}
