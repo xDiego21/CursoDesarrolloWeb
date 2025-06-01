@@ -1,0 +1,100 @@
+@import "variables";
+
+/* NOVEDADES */
+
+.seccion-novedades{
+    @include nov-flex (20px, wrap, space-around);
+    img{
+        @include medidas (100%, 500px);
+    }
+    .anime-flex{
+        width: 45%;
+        padding: 15px;
+        a{
+            color: $naranja;
+        }
+        .acord-item{
+            border: solid $naranja;
+            border-top-width: 0.5px;
+            z-index: 1;
+            .acord-boton{
+                padding: 0px 5px;
+                z-index: 1;
+                &::after{
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+    }
+    .manga-flex{
+        @extend .anime-flex;
+    }
+}
+
+/* RESPONSIVE */
+@media (min-width:320px) and (max-width:500px) {
+    .seccion-novedades{
+        @include nov-flex2 (column, flex-start, 25px);
+        .anime-flex{
+            padding: 0px;
+            width: 100%;
+        }
+        .manga-flex{
+            @extend .anime-flex;
+        }
+    }
+}
+
+/* POPULARES */
+
+.seccion-populares1{
+    img{
+        @include medidas (100%, 100%);
+    }
+    @include pop-grid (10px, 10px, 50px);
+}
+.seccion-populares2{
+    @extend .seccion-populares1;
+    margin-bottom: 120px;
+}
+
+/* RESPONSIVE */
+@media (min-width:480px) and (max-width:500px) {
+    .seccion-populares1{
+        @include pop-responsive;
+        h3{
+            font-size: larger;
+        }
+    }
+    .seccion-populares2{
+        @include pop-responsive;
+        h3{
+            font-size: larger;
+        }
+        padding-bottom: 20px;
+    }
+}
+@media (min-width:360px) and (max-width:479px) {
+    .seccion-populares1{
+        @include pop-responsive;
+    }
+    .seccion-populares2{
+        @include pop-responsive;
+        margin-bottom: 150px;
+    }
+}
+@media (min-width:320px) and (max-width:359px) {
+    .seccion-populares1{
+        @include pop-responsive;
+        p{
+            font-size: smaller;
+        }
+    }
+    .seccion-populares2{
+        @include pop-responsive;
+        p{
+            font-size: smaller;
+        }
+        margin-bottom: 140px;
+    }
+}

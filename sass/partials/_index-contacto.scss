@@ -1,0 +1,133 @@
+@import "variables";
+
+/* INDEX */
+
+.miCarrusel{
+    img{
+        height: 500px;
+    }
+}
+.videoTrailer{
+    @include flex-video;
+    .linkVideo{
+        width: 600px;
+        max-width: 100%;
+    }
+}
+article{
+    .urls{
+        text-decoration-line: underline;
+        margin: 0px;
+    }
+    .urlsLink{
+        font-family: $font;
+        font-size: 20px;
+        color: $naranja;
+        text-decoration: none;
+        margin: 10px;
+    }
+}
+
+/* RESPONSIVE */
+
+@media (min-width:480px) and (max-width:500px) {
+    .videoTrailer{
+        @include flex-video;
+    }
+    .miCarrusel{
+        img{
+            height: 200px;
+        }
+    }
+}
+@media (min-width:320px) and (max-width:479px) {
+    .miCarrusel{
+        img{
+            height: 200px;
+        }
+    }
+}
+
+/* CONTACTO */
+
+.formulariotext{
+    font-size: 20px;
+}
+form{
+    @include form-grid (repeat(4, 55px) 150px 60px, 100px 250px, center);
+    .nombre{
+    grid-area: nombre;
+    }
+    .email{
+    grid-area: email;
+    }
+    .celular{
+        grid-area: celular;
+    }
+    .tema{
+        grid-area: tema;
+    }
+    .mensaje{
+        grid-area: mensaje;
+    }
+    .verificacion{
+        grid-area: verificacion;
+    }
+    textarea{
+        @include textarea;
+    }
+    label{
+        @include label;
+    }
+    input{
+        padding: 5px;
+        font-size: large;
+    }
+}
+
+/* RESPONSIVE */
+@media (min-width:480px) and (max-width:500px) {
+    form{
+        grid-template-rows: repeat(4, 35px) 135px 35px;
+        input{
+            font-size: 10px;
+        }
+        textarea{
+        width: 285px;
+        }
+    }
+}
+@media (min-width:360px) and (max-width:479px) {
+    form{
+        grid-template-rows: repeat(4, 30px) 130px 30px;
+        input{
+        font-size: x-small;
+        }
+        label{
+        font-size: small;
+        padding: 0px;
+        }
+    }
+    .formulariotext{
+        font-size: medium;
+    }
+}
+@media (min-width:320px) and (max-width:359px) {
+    form{
+        grid-template-rows: repeat(4, 30px) 130px 30px;
+        grid-template-columns: 100px 200px;
+        textarea{
+        height: 80%;
+        }
+        input{
+        font-size: 8px;
+        }
+        label{
+        font-size: small;
+        padding: 0px;
+        } 
+    }
+    .formulariotext{
+        font-size: small;
+    }
+}

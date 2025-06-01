@@ -1,0 +1,164 @@
+@import "variables";
+
+/* EN EMISION */
+
+.seccion-emision1{
+    @include emiA-grid;
+    img{
+        @include medidas (100%, 100%);
+    }
+    figcaption{
+        font-size: 40px;
+    }
+    .anime-emision1{
+        grid-area: anime1;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .anime-emision2{
+        grid-area: anime2;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .anime-emision3{
+        grid-area: anime3;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .anime-emision4{
+        grid-area: anime4;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .anime-emision5{
+        grid-area: anime5;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+}
+.seccion-emision2{
+    @include emiM-grid;
+    @extend .seccion-emision1;
+    .manga-emision1{
+    grid-area: manga1;
+    letter-spacing: 1px;
+    text-align: center;
+    }
+    .manga-emision2{
+        grid-area: manga2;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .manga-emision3{
+        grid-area: manga3;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .manga-emision4{
+        grid-area: manga4;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .manga-emision5{
+        grid-area: manga5;
+        letter-spacing: 1px;
+        text-align: center;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+/* RESPONSIVE */
+@media (min-width:480px) and (max-width:500px) {
+    .seccion-emision1{
+        figcaption{
+            @include emi-responsive;
+        }
+        row-gap: 60px;
+    }
+    .seccion-emision2{
+        figcaption{
+            @include emi-responsive;
+        }
+        row-gap: 60px;
+    }
+}
+@media (min-width:360px) and (max-width:479px) {
+    .seccion-emision1{
+        figcaption{
+            @include emi-responsive1;
+        }
+        row-gap: 45px;
+    }
+    .seccion-emision2{
+        @include emi-responsive1;
+        row-gap: 45px;
+    }
+}
+@media (min-width:320px) and (max-width:359px) {
+    .seccion-emision1{
+        figcaption{
+            @include emi-responsive2;
+        }
+    }
+    .seccion-emision2{
+        figcaption{
+            @include emi-responsive2;
+        }
+    }
+}
+
+/* CATEGORIAS */
+
+.categoria-accion{
+    @include catA-flex ( wrap, space-between );
+    img{
+        @include medidas( 100%, 500px);
+    }
+    p{
+        font-size: 20px;
+    }
+}
+.categoria-aventura{
+    @extend .categoria-accion;
+}
+
+/* RESPONSIVE */
+@media (min-width:480px) and (max-width:500px) {
+    .titulo-categoria{
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+    .categoria-accion{
+        @include cat-responsive;
+    }
+    .categoria-aventura{
+        @include cat-responsive;
+    }
+}
+@media (min-width:360px) and (max-width:479px) {
+    .titulo-categoria{
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+    .categoria-accion{
+        @include cat-responsive1;
+    }
+    .categoria-aventura{
+        @include cat-responsive1;
+    }
+}
+@media (min-width:320px) and (max-width:359px) {
+    .titulo-categoria{
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+    .categoria-accion{
+        @include cat-responsive2;
+    }
+    .categoria-aventura{
+        @include cat-responsive2;
+    }
+}
+

@@ -1,0 +1,181 @@
+/* PALETA DE COLORES */
+$naranja: #FF6500;
+$naranja-transparente: rgba(255, 101, 0, 0.7);
+$azul: #1E3E62;
+$azul-oscuro: #0B192C;
+/* FONT FAMILY */
+$font: "Bebas Neue", sans-serif;
+/* MIXIN HEADER-MAIN-FOOTER */
+@mixin flex-h1 {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 2px;
+    margin-top: -38px;
+    font-size: 35px;
+}
+@mixin miItem-responsive {
+    background-color: $naranja-transparente;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+@mixin footer-grid{
+    display: grid;
+    grid-template-areas:
+    "parrafo parrafo"
+    "imagen imagen";
+    height: 100%;
+    margin: 0px;
+}
+@mixin flex-h2{
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+/* MIXIN INDEX */
+@mixin flex-video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* MIXIN CONTACTO */
+@mixin textarea{
+    width: 100%;
+    height: 100px;
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+@mixin form-grid ($row, $columns, $justify){
+    display: grid;
+    grid-template-areas:
+    "nombre nombre nombre"
+    "email email ."
+    "celular celular celular"
+    "tema tema ."
+    "mensaje mensaje ."
+    "verificacion verificacion .";
+    grid-template-rows: $row;
+    grid-template-columns: $columns;
+    justify-content: $justify;
+}
+@mixin label{
+    font-weight: bold;
+    color: $naranja;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    padding: 5px;
+    font-size: large;
+}
+/* MIXIN NOVEDADES */
+@mixin nov-flex ($gap, $warp, $justify){
+    display: flex;
+    gap: $gap;
+    flex-wrap: $warp;
+    justify-content: $justify,
+}
+@mixin medidas ($ancho, $alto){
+    width: $ancho;
+    height: $alto;
+}
+@mixin nov-flex2 ($direction, $align, $marginbot){
+    flex-direction: $direction;
+    align-items: $align;
+    margin-bottom: $marginbot;
+}
+/* MIXIN POPULARES */
+@mixin pop-grid ($cgap, $rgap, $paddbot){
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+    grid-template-rows: repeat(2, 700px);
+    column-gap: $cgap;
+    row-gap: $rgap;
+    padding-bottom: $paddbot;
+}
+@mixin pop-responsive{
+    grid-template-columns: 1.5fr 1.5fr;
+    grid-template-rows: repeat(4, 500px) !important;
+}
+/* MIXIN EN EMISION */
+@mixin emiA-grid{
+    display: grid;
+    grid-template-areas: 
+    "anime1 anime2 anime3"
+    "anime4 anime5 .";
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 60px;
+    column-gap: 5px;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+@mixin emiM-grid{
+    display: grid;
+    grid-template-areas: 
+    "manga1 manga2 manga3"
+    "manga4 manga5 .";
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 60px;
+    column-gap: 5px;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+@mixin emi-responsive{
+    font-size: large;
+    letter-spacing: 1px;
+}
+@mixin emi-responsive1{
+    font-size: smaller;
+    letter-spacing: 0.5px;
+}
+@mixin emi-responsive2{
+    font-size: small;
+    letter-spacing: 0.5px;
+}
+/* MIXIN CATEGORIA */
+@mixin catA-flex ($flex, $justify){
+    display: flex;
+    margin-top: 10px;
+    padding-left: 0px;
+    list-style: none;
+    letter-spacing: 1px;
+    flex-wrap: $flex;
+    justify-content: $justify;
+}
+@mixin cat-responsive {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    font-size: larger;
+}
+@mixin cat-responsive1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 500px);
+    column-gap: 10px;
+    row-gap: 10px;
+    font-size: larger;
+    text-align: center;
+    img{
+        height: 450px;
+    }
+}
+@mixin cat-responsive2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 400px);
+    column-gap: 10px;
+    row-gap: 30px;
+    font-size: larger;
+    text-align: center;
+    margin-bottom: 30px;
+    img{
+        height: 400px;
+    }
+}
+
