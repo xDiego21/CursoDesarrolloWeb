@@ -5,7 +5,12 @@ $azul: #1E3E62;
 $azul-oscuro: #0B192C;
 // FONT FAMILY
 $font: "Bebas Neue", sans-serif;
-// MIXIN HEADER-MAIN-FOOTER 
+// MIXIN HEADER-MAIN-FOOTER
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
 @mixin flex-h1 {
     display: flex;
     justify-content: center;

@@ -154,23 +154,37 @@ main h3 {
 
 /* FOOTER */
 footer {
-  display: grid;
-  grid-template-areas: "parrafo parrafo" "imagen imagen";
-  height: 100%;
-  margin: 0px;
   background-color: #FF6500;
 }
 footer p {
   font-size: 25px;
-  grid-area: parrafo;
   color: #0B192C;
   font-family: "Bebas Neue", sans-serif;
   margin-left: 5px;
 }
-footer img {
+footer .banner-footer {
+  position: relative;
+  width: 100%;
+}
+footer .banner-footer img {
   width: 100%;
   height: 200px;
-  grid-area: imagen;
+  display: block;
+}
+footer .banner-footer .redes-sociales {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+footer .banner-footer .redes-sociales a img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
+}
+footer .banner-footer .redes-sociales a img:hover {
+  transform: scale(1.1);
 }
 
 /* RESPONSIVE */
@@ -179,24 +193,36 @@ footer img {
     font-size: medium;
     margin-bottom: 0px;
   }
-  footer img {
+  footer .banner-footer img {
     height: 100px;
+  }
+  footer .banner-footer .redes-sociales a img {
+    width: 24px;
+    height: 24px;
   }
 }
 @media (min-width: 360px) and (max-width: 479px) {
   footer p {
     font-size: medium;
   }
-  footer img {
+  footer .banner-footer img {
     height: 80px;
+  }
+  footer .banner-footer .redes-sociales a img {
+    width: 24px;
+    height: 24px;
   }
 }
 @media (min-width: 320px) and (max-width: 359px) {
   footer p {
     font-size: small;
   }
-  footer img {
+  footer .banner-footer img {
     height: 80px;
+  }
+  footer .banner-footer .redes-sociales a img {
+    width: 24px;
+    height: 24px;
   }
 }
 /* INDEX */
