@@ -53,6 +53,10 @@ $font: "Bebas Neue", sans-serif;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-left: 5px;
+    transition: 1s;
+    &:focus {
+        background-color: #FF6500;
+    }
 }
 @mixin form-grid ($row, $columns, $justify){
     display: grid;

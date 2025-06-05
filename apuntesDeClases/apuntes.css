@@ -421,3 +421,97 @@ Luego con el import unificamos todos los archivos en uno */
 
 /*------------------------FIN DE LA CLASE 7--------------------------*/
 
+                    /* ANIMACIONES */
+
+    /* EJES */
+/* Estos Ejes, dan movimiento, X(movimientos horizontales), Y(movimientos verticales), Z(movimientos hacia delante y hacia atras).
+    /* GRADIENTES */
+/* Para crear un degrade de colores, "linear-gradient" se expande de un lado al otro, "radial-gradient" se expande desde el centro hacia afuera */
+body{
+    background-image: linear-gradient(to rigth, red, blue); /* hacia la derecha */
+    background-image: radial-gradient(circle, red, blue);
+}
+    /* TRANSFORMACIONES */
+/* transform: translate permite mover un elemento a lo largo del eje X e Y permaneciendo estatico */
+body{ 
+    transform: translate(50px, 100px); /* traslada 50px sobre el eje X y 100px sobre el Y */
+    transform: rotate(45deg); /* rota un elemento en grados en el setido de las agujas de relog. 
+    "deg" (grados) */
+    transform: scale(2, 1.5); /* escala(agranda o achica su tamaño) un elemento a lo largo el eje X e Y, 2(duplica su tamaño sobre el eje X) 1.5(aumenta en un 50% sobre el eje Y) los valores superiores a 1 van a multiplicar su tamaño y lo valores entre 1 y 0 van a achicar, no hay valores negativos para achicar */
+    transform: skew(20deg, 10deg); /* sesga un elemento a lo largo del eje X e Y en grados. Modifica los angulos */
+}
+    /* ANIMACIONES */
+/* Las animaciones en CSS se definen utilizando la regla "@keyframes", esta nos permite especificar como y cuando deben cambiar los estilos de un elemento durante la animacion */
+.animacion {
+    opacity: 0;
+    animation: miAnimacion 2s infinite;
+}
+/* cambia la opacacidad del elemento de 0% a 100% gradualmente, durante 2 segundos e infinitamente */
+@keyframes miAnimacion {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+/* Sitios web  de librerias para animaciones: animate.css y aos.css */
+    /* TRANSICIONES */
+/* Las transiciones en CSS permiten cambiar gradualmente de un estilo a otro. 
+transition-property: Especifica el nombre de la propiedad CSS que queremos animar.
+transition-duration: Define el tiempo que tarda en completarse la transición.
+transition-timing-function: Describe cómo progresará la transición a lo largo de su duración.
+transition-delay: Indica el tiempo que se espera antes de que comience la transición.*/
+
+.button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    transition: background-color 0.5s ease;
+}
+.button:hover {
+    background-color: green;
+} /* Cuando el usuario pasa el ratón sobre el botón, el color de fondo cambia de azul a verde en 0.5 segundos. */
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: width 0.5s ease, background-color 1s ease;
+} /* Podemos aplicar transiciones a múltiples propiedades especificándolas en una lista separada por comas */
+.box:hover {
+    width: 200px;
+    background-color: blue;
+} /* Tanto el ancho como el color de fondo de la caja cambiarán cuando se pase el ratón por encima, pero con diferentes duraciones. */
+    /* FUNCIONES DE TEMPORIZACION */
+/* Las funciones de temporización (transition-timing-function) controlan la velocidad del efecto de transición. Las más comunes son:
+
+ease: La transición comienza lentamente, acelera en el medio y luego disminuye al final.
+linear: La transición tiene una velocidad constante de principio a fin.
+ease-in: La transición comienza lentamente y acelera hacia el final.
+ease-out: La transición comienza rápido y desacelera hacia el final.
+ease-in-out: Comienza y termina lentamente, con una aceleración en el medio. */
+
+.ease-box {
+    transition: transform 1s ease;
+}
+.linear-box {
+    transition: transform 1s linear;
+}
+.ease-in-box {
+    transition: transform 1s ease-in;
+}
+.ease-out-box {
+    transition: transform 1s ease-out;
+}
+.ease-in-out-box {
+    transition: transform 1s ease-in-out;
+}
+.box:hover {
+    transform: translateX(100px);
+} /* Cada caja tendrá un comportamiento diferente de acuerdo con la función de temporización utilizada. */
+    /* DELAYS DE TRANSICIONES */
+/* Podemos retrasar el inicio de una transición utilizando la propiedad transition-delay. */
+.delay-box {
+    transition: opacity 2s ease 1s;
+    opacity: 1;
+} /* la transición de opacidad comenzará 1 segundo después de pasar el ratón sobre la caja y durará 2 segundos. */
+.delay-box:hover {
+    opacity: 0;
+}

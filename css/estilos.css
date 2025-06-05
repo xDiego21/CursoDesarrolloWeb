@@ -292,11 +292,26 @@ form .celular {
 form .tema {
   grid-area: tema;
 }
+form .tema select {
+  transition: 1s;
+}
+form .tema select:focus {
+  background-color: #FF6500;
+}
 form .mensaje {
   grid-area: mensaje;
 }
 form .verificacion {
   grid-area: verificacion;
+}
+form .verificacion .botonEnviar {
+  transition: 2s;
+}
+form .verificacion .botonEnviar:hover {
+  background-color: #1E3E62;
+  color: #FF6500;
+  border-color: #FF6500;
+  transform: scale(1.1, 1.1);
 }
 form textarea {
   width: 100%;
@@ -307,6 +322,10 @@ form textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-left: 5px;
+  transition: 1s;
+}
+form textarea:focus {
+  background-color: #FF6500;
 }
 form label {
   font-weight: bold;
@@ -319,6 +338,10 @@ form label {
 form input {
   padding: 5px;
   font-size: large;
+  transition: 1s;
+}
+form input:focus {
+  background-color: #FF6500;
 }
 
 /* RESPONSIVE */
