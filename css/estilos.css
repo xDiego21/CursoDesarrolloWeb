@@ -499,7 +499,7 @@ form input:focus {
 /* EN EMISION */
 .seccion-emision1, .seccion-emision2 {
   display: grid;
-  grid-template-areas: "anime1 anime2 anime3" "anime4 anime5 .";
+  grid-template-areas: "anime1 anime2 anime3" "anime4 anime5 anime6";
   grid-template-columns: repeat(3, 30%);
   grid-template-rows: repeat(2, auto);
   row-gap: 60px;
@@ -514,35 +514,30 @@ form input:focus {
 .seccion-emision1 figcaption, .seccion-emision2 figcaption {
   font-size: 40px;
 }
-.seccion-emision1 .anime-emision1, .seccion-emision2 .anime-emision1 {
+.seccion-emision1 .anime-emision1, .seccion-emision2 .anime-emision1, .seccion-emision1 .anime-emision6, .seccion-emision2 .anime-emision6, .seccion-emision1 .anime-emision5, .seccion-emision2 .anime-emision5, .seccion-emision1 .anime-emision4, .seccion-emision2 .anime-emision4, .seccion-emision1 .anime-emision3, .seccion-emision2 .anime-emision3, .seccion-emision1 .anime-emision2, .seccion-emision2 .anime-emision2 {
   grid-area: anime1;
   letter-spacing: 1px;
   text-align: center;
 }
 .seccion-emision1 .anime-emision2, .seccion-emision2 .anime-emision2 {
   grid-area: anime2;
-  letter-spacing: 1px;
-  text-align: center;
 }
 .seccion-emision1 .anime-emision3, .seccion-emision2 .anime-emision3 {
   grid-area: anime3;
-  letter-spacing: 1px;
-  text-align: center;
 }
 .seccion-emision1 .anime-emision4, .seccion-emision2 .anime-emision4 {
   grid-area: anime4;
-  letter-spacing: 1px;
-  text-align: center;
 }
 .seccion-emision1 .anime-emision5, .seccion-emision2 .anime-emision5 {
   grid-area: anime5;
-  letter-spacing: 1px;
-  text-align: center;
+}
+.seccion-emision1 .anime-emision6, .seccion-emision2 .anime-emision6 {
+  grid-area: anime6;
 }
 
 .seccion-emision2 {
   display: grid;
-  grid-template-areas: "manga1 manga2 manga3" "manga4 manga5 .";
+  grid-template-areas: "manga1 manga2 manga3" "manga4 manga5 manga6";
   grid-template-columns: repeat(3, 30%);
   grid-template-rows: repeat(2, auto);
   row-gap: 60px;
@@ -550,33 +545,28 @@ form input:focus {
   justify-content: center;
   padding-bottom: 60px;
 }
-.seccion-emision2 .manga-emision1 {
+.seccion-emision2 .manga-emision1, .seccion-emision2 .manga-emision6, .seccion-emision2 .manga-emision5, .seccion-emision2 .manga-emision4, .seccion-emision2 .manga-emision3, .seccion-emision2 .manga-emision2 {
   grid-area: manga1;
   letter-spacing: 1px;
   text-align: center;
 }
 .seccion-emision2 .manga-emision2 {
   grid-area: manga2;
-  letter-spacing: 1px;
-  text-align: center;
 }
 .seccion-emision2 .manga-emision3 {
   grid-area: manga3;
-  letter-spacing: 1px;
-  text-align: center;
 }
 .seccion-emision2 .manga-emision4 {
   grid-area: manga4;
-  letter-spacing: 1px;
-  text-align: center;
 }
 .seccion-emision2 .manga-emision5 {
   grid-area: manga5;
-  letter-spacing: 1px;
-  text-align: center;
 }
 .seccion-emision2 .manga-emision5 img {
   width: 100%;
+}
+.seccion-emision2 .manga-emision6 {
+  grid-area: manga6;
 }
 
 /* RESPONSIVE */

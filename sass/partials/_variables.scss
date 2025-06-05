@@ -1,11 +1,11 @@
-// PALETA DE COLORES 
+//----------------------------------> PALETA DE COLORES 
 $naranja: #FF6500;
 $naranja-transparente: rgba(255, 101, 0, 0.7);
 $azul: #1E3E62;
 $azul-oscuro: #0B192C;
-// FONT FAMILY
+//----------------------------------> FONT FAMILY
 $font: "Bebas Neue", sans-serif;
-// MIXIN HEADER-MAIN-FOOTER
+//----------------------------------> MIXIN HEADER-MAIN-FOOTER
 @mixin reset {
     margin: 0;
     padding: 0;
@@ -37,13 +37,13 @@ $font: "Bebas Neue", sans-serif;
     font-size: 2.5rem;
     letter-spacing: 1px;
 }
-// MIXIN INDEX
+//----------------------------------> MIXIN INDEX
 @mixin flex-video{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-// MIXIN CONTACTO
+//----------------------------------> MIXIN CONTACTO
 @mixin textarea{
     width: 100%;
     height: 100px;
@@ -79,7 +79,7 @@ $font: "Bebas Neue", sans-serif;
     padding: 5px;
     font-size: large;
 }
-// MIXIN NOVEDADES
+//----------------------------------> MIXIN NOVEDADES
 @mixin nov-flex ($gap, $warp, $justify){
     display: flex;
     gap: $gap;
@@ -95,7 +95,7 @@ $font: "Bebas Neue", sans-serif;
     align-items: $align;
     margin-bottom: $marginbot;
 }
-// MIXIN POPULARES
+//----------------------------------> MIXIN POPULARES
 @mixin pop-grid ($cgap, $rgap, $paddbot){
     display: grid;
     grid-template-columns: 2fr 1fr 2fr 1fr;
@@ -108,12 +108,12 @@ $font: "Bebas Neue", sans-serif;
     grid-template-columns: 1.5fr 1.5fr;
     grid-template-rows: repeat(4, 500px) !important;
 }
-// MIXIN EN EMISION
+//----------------------------------> MIXIN EN EMISION
 @mixin emiA-grid{
     display: grid;
     grid-template-areas: 
     "anime1 anime2 anime3"
-    "anime4 anime5 .";
+    "anime4 anime5 anime6";
     grid-template-columns: repeat(3, 30%);
     grid-template-rows: repeat(2, auto);
     row-gap: 60px;
@@ -125,7 +125,7 @@ $font: "Bebas Neue", sans-serif;
     display: grid;
     grid-template-areas: 
     "manga1 manga2 manga3"
-    "manga4 manga5 .";
+    "manga4 manga5 manga6";
     grid-template-columns: repeat(3, 30%);
     grid-template-rows: repeat(2, auto);
     row-gap: 60px;
@@ -145,7 +145,7 @@ $font: "Bebas Neue", sans-serif;
     font-size: small;
     letter-spacing: 0.5px;
 }
-// MIXIN CATEGORIA
+//----------------------------------> MIXIN CATEGORIA
 @mixin catA-flex ($flex, $justify){
     display: flex;
     margin-top: 10px;
