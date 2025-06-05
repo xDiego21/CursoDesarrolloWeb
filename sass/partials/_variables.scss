@@ -149,18 +149,46 @@ $font: "Bebas Neue", sans-serif;
 @mixin catA-flex ($flex, $justify){
     display: flex;
     margin-top: 10px;
+    margin-bottom: 50px;
     padding-left: 0px;
     list-style: none;
     letter-spacing: 1px;
     flex-wrap: $flex;
     justify-content: $justify;
 }
+@mixin carta{
+    position: relative;
+    @include medidas(100%, 500px);
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    &:hover {
+        transform: rotateY(180deg);
+    }
+}
+@mixin carta-fyr {
+    position: absolute;
+    @include medidas(100%, 500px);
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+@mixin carta-rever {
+    background-color: $azul-oscuro;
+    color: $naranja;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    font-family: $font;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.3;
+}
 @mixin cat-responsive {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 10px;
-    row-gap: 10px;
-    font-size: larger;
+    row-gap: 40px;
+    font-size: large;
 }
 @mixin cat-responsive1 {
     display: grid;
