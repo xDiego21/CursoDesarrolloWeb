@@ -444,12 +444,30 @@ body{
 /* Las animaciones en CSS se definen utilizando la regla "@keyframes", esta nos permite especificar como y cuando deben cambiar los estilos de un elemento durante la animacion */
 .animacion {
     opacity: 0;
-    animation: miAnimacion 2s infinite;
+    animation: miAnimacion 4s infinite;
+    /* o tambien */
+    animation-name: miAnimacion;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 /* cambia la opacacidad del elemento de 0% a 100% gradualmente, durante 2 segundos e infinitamente */
 @keyframes miAnimacion {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    /* la siguiente se llama "linea de tiempo" que define lo que va a pasar en lo que dure la animacion */
+    0% {
+        color: blue;
+    }
+    25% {
+        color: blueviolet;
+    }
+    50% {
+        color: brown;
+    }
+    75% {
+        color: cyan;
+    }
+    100%{
+        color: blue;
+    }
 }
 /* Sitios web  de librerias para animaciones: animate.css y aos.css */
     /* TRANSICIONES */

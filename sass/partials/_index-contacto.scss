@@ -79,7 +79,7 @@ form{
     .verificacion{
         grid-area: verificacion;
         .botonEnviar{
-            transition: 2s;
+            transition: 0.7s;
             &:hover{
                 background-color: $azul;
                 color: $naranja;

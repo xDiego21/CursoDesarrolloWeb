@@ -305,7 +305,7 @@ form .verificacion {
   grid-area: verificacion;
 }
 form .verificacion .botonEnviar {
-  transition: 2s;
+  transition: 0.7s;
 }
 form .verificacion .botonEnviar:hover {
   background-color: #1E3E62;
