@@ -70,14 +70,17 @@
 }
 
 /* RESPONSIVE */
+@media (min-width:501px) and (max-width:769px) {
+    .seccion-emision1{
+        figure{
+            figcaption{
+                @include emi-responsive;
+            }
+        }
+    }
+}
 @media (min-width:480px) and (max-width:500px) {
     .seccion-emision1{
-        figcaption{
-            @include emi-responsive;
-        }
-        row-gap: 60px;
-    }
-    .seccion-emision2{
         figcaption{
             @include emi-responsive;
         }
@@ -137,7 +140,7 @@
 }
 
 /* RESPONSIVE */
-@media (min-width:480px) and (max-width:500px) {
+@media (min-width:480px) and (max-width:769px) {
     .titulo-categoria{
         font-size: 30px;
         letter-spacing: 1px;
@@ -149,6 +152,8 @@
             .carta-anime{
                 .carta-reverso{
                     font-size: 1rem;
+                    display: flex;
+                    justify-content: center;
                 }
             }
         }
@@ -168,7 +173,9 @@
             @include medidas (100%, 100%);
             .carta-anime{
                 .carta-reverso{
-                    font-size: 1rem;
+                    font-size: 15px;
+                    display: flex;
+                    justify-content: center;
                 }
             }
         }
@@ -188,7 +195,9 @@
             @include medidas (100%, 100%);
             .carta-anime{
                 .carta-reverso{
-                    font-size: 1rem;
+                    font-size: 14px;
+                    display: flex;
+                    justify-content: center;
                 }
             }
         }

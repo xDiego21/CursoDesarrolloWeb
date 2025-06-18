@@ -85,7 +85,7 @@ header div .miNav .miItem .miLink:hover {
 }
 
 /* RESPONSIVE */
-@media (min-width: 480px) and (max-width: 500px) {
+@media (min-width: 480px) and (max-width: 769px) {
   header {
     height: 70px;
   }
@@ -188,6 +188,17 @@ footer .banner-footer .redes-sociales a img:hover {
 }
 
 /* RESPONSIVE */
+@media (min-width: 501px) and (max-width: 769px) {
+  footer {
+    height: 100px;
+  }
+  footer .banner-footer img {
+    height: 100%;
+  }
+  footer p {
+    margin-bottom: 0px;
+  }
+}
 @media (min-width: 480px) and (max-width: 500px) {
   footer p {
     font-size: medium;
@@ -253,6 +264,11 @@ article .urlsLink {
 }
 
 /* RESPONSIVE */
+@media (min-width: 501px) and (max-width: 769px) {
+  .miCarrusel img {
+    height: 400px;
+  }
+}
 @media (min-width: 480px) and (max-width: 500px) {
   .videoTrailer {
     display: flex;
@@ -421,6 +437,41 @@ form input:focus {
   filter: brightness(0) invert(1);
 }
 /* RESPONSIVE */
+@media (min-width: 580px) and (max-width: 769px) {
+  .seccion-novedades {
+    justify-content: space-evenly;
+    column-gap: 0px;
+  }
+  .seccion-novedades .anime-flex, .seccion-novedades .manga-flex {
+    padding: 5px;
+  }
+  .seccion-novedades .anime-flex .accordion, .seccion-novedades .manga-flex .accordion {
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+  }
+  .seccion-novedades .anime-flex .accordion img, .seccion-novedades .manga-flex .accordion img {
+    width: 100%;
+    height: 450px;
+  }
+}
+@media (min-width: 501px) and (max-width: 579px) {
+  .seccion-novedades {
+    justify-content: space-evenly;
+    column-gap: 0px;
+  }
+  .seccion-novedades .anime-flex, .seccion-novedades .manga-flex {
+    width: 240px;
+    padding: 5px;
+  }
+  .seccion-novedades .anime-flex .accordion, .seccion-novedades .manga-flex .accordion {
+    width: 100%;
+  }
+  .seccion-novedades .anime-flex .accordion img, .seccion-novedades .manga-flex .accordion img {
+    width: 100%;
+    height: 400px;
+  }
+}
 @media (min-width: 320px) and (max-width: 500px) {
   .seccion-novedades {
     flex-direction: column;
@@ -451,7 +502,70 @@ form input:focus {
 }
 
 /* RESPONSIVE */
-@media (min-width: 480px) and (max-width: 500px) {
+@media (min-width: 691px) and (max-width: 769px) {
+  .seccion-populares1, .seccion-populares2 {
+    display: grid;
+    grid-template-areas: "ani1 ani2" "parr1 parr2" "ani3 ani4" "parr3 parr4";
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(4, auto);
+  }
+  .seccion-populares1 .img1, .seccion-populares2 .img1 {
+    grid-area: ani1;
+  }
+  .seccion-populares1 .img2, .seccion-populares2 .img2 {
+    grid-area: ani2;
+  }
+  .seccion-populares1 .parr1, .seccion-populares2 .parr1 {
+    grid-area: parr1;
+  }
+  .seccion-populares1 .parr2, .seccion-populares2 .parr2 {
+    grid-area: parr2;
+  }
+  .seccion-populares1 .img3, .seccion-populares2 .img3 {
+    grid-area: ani3;
+  }
+  .seccion-populares1 .img4, .seccion-populares2 .img4 {
+    grid-area: ani4;
+  }
+  .seccion-populares1 .parr3, .seccion-populares2 .parr3 {
+    grid-area: parr3;
+  }
+  .seccion-populares1 .parr4, .seccion-populares2 .parr4 {
+    grid-area: parr4;
+  }
+  .seccion-populares2 {
+    display: grid;
+    grid-template-areas: "ani1 ani2" "parr1 parr2" "ani3 ani4" "parr3 parr4";
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(4, auto);
+    padding-bottom: 0px;
+  }
+  .seccion-populares2 .img1 {
+    grid-area: ani1;
+  }
+  .seccion-populares2 .img2 {
+    grid-area: ani2;
+  }
+  .seccion-populares2 .parr1 {
+    grid-area: parr1;
+  }
+  .seccion-populares2 .parr2 {
+    grid-area: parr2;
+  }
+  .seccion-populares2 .img3 {
+    grid-area: ani3;
+  }
+  .seccion-populares2 .img4 {
+    grid-area: ani4;
+  }
+  .seccion-populares2 .parr3 {
+    grid-area: parr3;
+  }
+  .seccion-populares2 .parr4 {
+    grid-area: parr4;
+  }
+}
+@media (min-width: 480px) and (max-width: 690px) {
   .seccion-populares1, .seccion-populares2 {
     grid-template-columns: 1.5fr 1.5fr;
     grid-template-rows: repeat(4, 500px) !important;
@@ -570,18 +684,17 @@ form input:focus {
 }
 
 /* RESPONSIVE */
+@media (min-width: 501px) and (max-width: 769px) {
+  .seccion-emision1 figure figcaption, .seccion-emision2 figure figcaption {
+    font-size: large;
+    letter-spacing: 1px;
+  }
+}
 @media (min-width: 480px) and (max-width: 500px) {
   .seccion-emision1, .seccion-emision2 {
     row-gap: 60px;
   }
   .seccion-emision1 figcaption, .seccion-emision2 figcaption {
-    font-size: large;
-    letter-spacing: 1px;
-  }
-  .seccion-emision2 {
-    row-gap: 60px;
-  }
-  .seccion-emision2 figcaption {
     font-size: large;
     letter-spacing: 1px;
   }
@@ -668,7 +781,7 @@ form input:focus {
 }
 
 /* RESPONSIVE */
-@media (min-width: 480px) and (max-width: 500px) {
+@media (min-width: 480px) and (max-width: 769px) {
   .titulo-categoria {
     font-size: 30px;
     letter-spacing: 1px;
@@ -686,6 +799,8 @@ form input:focus {
   }
   .categoria-accion .carta .carta-anime .carta-reverso, .categoria-aventura .carta .carta-anime .carta-reverso {
     font-size: 1rem;
+    display: flex;
+    justify-content: center;
   }
   .categoria-aventura {
     display: grid;
@@ -712,7 +827,9 @@ form input:focus {
     height: 100%;
   }
   .categoria-accion .carta .carta-anime .carta-reverso, .categoria-aventura .carta .carta-anime .carta-reverso {
-    font-size: 1rem;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
   }
   .categoria-aventura {
     display: grid;
@@ -739,7 +856,9 @@ form input:focus {
     height: 100%;
   }
   .categoria-accion .carta .carta-anime .carta-reverso, .categoria-aventura .carta .carta-anime .carta-reverso {
-    font-size: 1rem;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
   }
 }
 

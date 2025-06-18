@@ -108,6 +108,40 @@ $font: "Bebas Neue", sans-serif;
     grid-template-columns: 1.5fr 1.5fr;
     grid-template-rows: repeat(4, 500px) !important;
 }
+@mixin pop-flex{
+    display: grid;
+    grid-template-areas: 
+    "ani1 ani2"
+    "parr1 parr2"
+    "ani3 ani4"
+    "parr3 parr4";
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(4, auto);    
+    .img1{
+        grid-area: ani1;
+    }
+    .img2{
+        grid-area: ani2;
+    }
+    .parr1{
+        grid-area: parr1;
+    }
+    .parr2{
+        grid-area: parr2;
+    }
+    .img3{
+        grid-area: ani3;
+    }
+    .img4{
+        grid-area: ani4;
+    }
+    .parr3{
+        grid-area: parr3;
+    }
+    .parr4{
+        grid-area: parr4;
+    }
+}
 //----------------------------------> MIXIN EN EMISION
 @mixin emiA-grid{
     display: grid;
