@@ -533,3 +533,39 @@ ease-in-out: Comienza y termina lentamente, con una aceleración en el medio. */
 .delay-box:hover {
     opacity: 0;
 }
+
+/*------------------------FIN DE LA CLASE 8--------------------------*/
+
+                    /* SEO Y SERVIDORES */
+    /* SEO */
+/* Optimizacion para Motores de Busqueda. El SEO involucra diversas estrategias y metodos para ayudar a traer mas cisitas desde los motores de busqueda, al lograr que el contenido de la web se posicione mejor en los resultados de dichos motores.
+BENEFICIOS: Mas visibilidad en las busquedas.
+Atrae trafico cualificado, potencial cliente.
+Trafico gratuito, no es necesario hacer publicidad para aparecer en las busquedas.
+Cuanto mas contenido optimizado, mas posibilidades de tener visitas.
+DIFICULTADES:
+No garantiza una posicion en las busquedas.
+Resultados lentos.
+Dificil de controlar.*/
+
+    /* TIPOS DE SEO
+Podemos ordenar las diferentes estrategias y aplicables al SEO, en al menos cuatro tipos.
+
+SEO on-page --> Optimizaciones en el codigo
+
+Meta description(etiqueta meta dentro del head), descripcion de nuestras paginas web detallando su contenido.
+Keywords(palabras clave), meta keywords con palabras claves que identifiquen nuestro sitio
+Titulos de paginas, indica los titulos de las paginas utilizando la etiqueta "title" dentro de head. Es importante que contenga el nombre de tu sitio o negocio, ademas de una breve descripcion de su contenido.
+Jerarquia de encabezados, Utilizar varios tamaños de encabezado en orden(h1,h2,h3..), determina puntos principales y secundarios del contenido de la pag, evita escribir texto que no ayude a definir la estructura de la pagina y utiliar etiquetas de encabezado en lugares en los que otras etiquetas como <em> y <strong> serian mas adecuadas
+Contenido textual del sitio, Contenido de calidad atractivo y entretenido para el usuario.
+
+SEO off-page --> Cambios que estan relacionados con otros sitios, publicidades en sitios externos
+
+SEO tecnico --> Optimizaciones que ayudan a los buscadores a rastrear e indexar las páginas web de manera más eficiente
+
+SEO local --> Perfil de la empreza, contenido
+
+www.iloveimg.com/es ----> convertidor de imagenes
+
+    /* SERVIDORES
+
