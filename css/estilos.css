@@ -85,7 +85,7 @@ header div .miNav .miItem .miLink:hover {
 }
 
 /* RESPONSIVE */
-@media (min-width: 480px) and (max-width: 769px) {
+@media (min-width: 480px) and (max-width: 801px) {
   header {
     height: 70px;
   }
@@ -188,7 +188,7 @@ footer .banner-footer .redes-sociales a img:hover {
 }
 
 /* RESPONSIVE */
-@media (min-width: 501px) and (max-width: 769px) {
+@media (min-width: 501px) and (max-width: 801px) {
   footer {
     height: 100px;
   }
@@ -264,7 +264,7 @@ article .urlsLink {
 }
 
 /* RESPONSIVE */
-@media (min-width: 501px) and (max-width: 769px) {
+@media (min-width: 501px) and (max-width: 801px) {
   .miCarrusel img {
     height: 400px;
   }
@@ -437,7 +437,7 @@ form input:focus {
   filter: brightness(0) invert(1);
 }
 /* RESPONSIVE */
-@media (min-width: 580px) and (max-width: 769px) {
+@media (min-width: 580px) and (max-width: 801px) {
   .seccion-novedades {
     justify-content: space-evenly;
     column-gap: 0px;
@@ -502,7 +502,7 @@ form input:focus {
 }
 
 /* RESPONSIVE */
-@media (min-width: 691px) and (max-width: 769px) {
+@media (min-width: 691px) and (max-width: 801px) {
   .seccion-populares1, .seccion-populares2 {
     display: grid;
     grid-template-areas: "ani1 ani2" "parr1 parr2" "ani3 ani4" "parr3 parr4";
@@ -684,7 +684,7 @@ form input:focus {
 }
 
 /* RESPONSIVE */
-@media (min-width: 501px) and (max-width: 769px) {
+@media (min-width: 501px) and (max-width: 1366px) {
   .seccion-emision1 figure figcaption, .seccion-emision2 figure figcaption {
     font-size: large;
     letter-spacing: 1px;
@@ -781,7 +781,13 @@ form input:focus {
 }
 
 /* RESPONSIVE */
-@media (min-width: 480px) and (max-width: 769px) {
+@media (min-width: 1029px) and (max-width: 1366px) {
+  .categoria-accion, .categoria-aventura {
+    justify-content: space-evenly;
+    row-gap: 50px;
+  }
+}
+@media (min-width: 480px) and (max-width: 1028px) {
   .titulo-categoria {
     font-size: 30px;
     letter-spacing: 1px;

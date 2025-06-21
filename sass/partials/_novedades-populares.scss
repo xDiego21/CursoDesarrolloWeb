@@ -32,7 +32,7 @@
 }
 
 /* RESPONSIVE */
-@media (min-width:580px) and (max-width:769px) {
+@media (min-width:580px) and (max-width:801px) {
     .seccion-novedades{
         justify-content: space-evenly;
         column-gap: 0px;
@@ -92,7 +92,7 @@
 }
 
 /* RESPONSIVE */
-@media (min-width:691px) and (max-width:769px) {
+@media (min-width:691px) and (max-width:801px) {
     .seccion-populares1{
         @include pop-flex;        
     }
